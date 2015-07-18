@@ -65,17 +65,15 @@ $ ./run.sh
 ```
 
 ## Test
-Unit tests have been created to test functions within the app. A test should be executed on the commandline at the top-level dir like below
+Unit tests have been created to test functions within the app. A test should be executed on the commandline at the top-level dir. Two tests are available corresponding to each of module in src and can be executed as follows:
 
 ```sh
 $ cd tweet_ingestion
 $ python -m src.tests.unit_words_tweeeted
-$ python -m src.tests.unit_median_unique
 ```
 
 ```sh
 $ cd tweet_ingestion
-$ python -m src.tests.unit_words_tweeeted
 $ python -m src.tests.unit_median_unique
 ```
 The following output should return:
