@@ -1,0 +1,8 @@
+# Large input files
+tweet_input/*.txt.*
+
+# Any test files
+src/*.test
+
+# Compiled py
+*.pyc
