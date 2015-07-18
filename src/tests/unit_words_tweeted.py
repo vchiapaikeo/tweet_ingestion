@@ -24,10 +24,9 @@ tarts                       3
 vitamins                    2
 
 """
-from .. import words_tweeted
 import os
 import unittest
-#import src.words_tweeted
+from .. import words_tweeted
 
 # Set input and output constants
 WORKINGDIR = os.path.dirname(os.path.abspath(__file__))
