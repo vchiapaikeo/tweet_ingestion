@@ -24,12 +24,13 @@ tarts                       3
 vitamins                    2
 
 """
-
+from .. import words_tweeted
 import os
 import unittest
-import src.words_tweeted
+#import src.words_tweeted
 
 # Set input and output constants
+WORKINGDIR = os.path.dirname(os.path.abspath(__file__))
 TESTDATADIR = 'data'
 TESTDATAFILE = 'tweets_test.txt'
 TESTOUTFILE = 'words_tweeted_output.txt'
@@ -48,14 +49,14 @@ vitamins                    2
 class WordsTweetedTest(unittest.TestCase):
     """ Test words_tweeted module"""
 
-    test_infile = os.path.join(TESTDATADIR, TESTDATAFILE)
-    test_outfile = os.path.join(TESTDATADIR, TESTOUTFILE)
+    test_infile = os.path.join(WORKINGDIR, TESTDATADIR, TESTDATAFILE)
+    test_outfile = os.path.join(WORKINGDIR, TESTDATADIR, TESTOUTFILE)
 
     def test_get_word_freq(self):
         """Test get_word_freq() for correct key/value pairs"""
 
         # Set test_answer to function call on test_infile
-        test_answer = src.words_tweeted.get_word_freq(self.test_infile)
+        test_answer = words_tweeted.get_word_freq(self.test_infile)
 
         # Expect equality between test_answer and OUTPUTDICT
         self.assertEqual(test_answer, OUTPUTDICT)
@@ -70,7 +71,7 @@ class WordsTweetedTest(unittest.TestCase):
             pass
 
         # Call function with passed dict and output to test_outfile
-        src.words_tweeted.sort_and_write_dict(OUTPUTDICT, self.test_outfile)
+        words_tweeted.sort_and_write_dict(OUTPUTDICT, self.test_outfile)
 
         # Expect equality between test_outfile and OUTPUTSTR
         with open(self.test_outfile) as f:

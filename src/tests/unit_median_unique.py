@@ -17,9 +17,10 @@ write_streaming_median will write to file this string: '4.0\n3.5\n3.0\n'
 
 import os
 import unittest
-import src.median_unique
+from .. import median_unique
 
 # Set input and output constants
+WORKINGDIR = os.path.dirname(os.path.abspath(__file__))
 TESTDATADIR = 'data'
 TESTDATAFILE = 'tweets_test.txt'
 TESTOUTFILE = 'median_unique_output.txt'
@@ -31,14 +32,14 @@ OUTPUTSTR = '4.0\n3.5\n3.0\n'
 class MedianUniqueTest(unittest.TestCase):
     """Test median_unique module"""
 
-    test_infile = os.path.join(TESTDATADIR, TESTDATAFILE)
-    test_outfile = os.path.join(TESTDATADIR, TESTOUTFILE)
+    test_infile = os.path.join(WORKINGDIR, TESTDATADIR, TESTDATAFILE)
+    test_outfile = os.path.join(WORKINGDIR, TESTDATADIR, TESTOUTFILE)
 
     def test_get_streaming_median(self):
         """Test get_streaming_median() for correct median values"""
 
         # Create list to store median values generated from function call
-        test_answer = [median for median in src.median_unique.get_streaming_median(self.test_infile)]
+        test_answer = [median for median in median_unique.get_streaming_median(self.test_infile)]
 
         # Expect equality between produced array and OUTPUTARRAY
         self.assertEqual(test_answer, OUTPUTARRAY)
@@ -57,7 +58,7 @@ class MedianUniqueTest(unittest.TestCase):
             return (i for i in OUTPUTARRAY)
 
         # Call function with passed generator and output to test_outfile
-        src.median_unique.write_streaming_values(self.test_outfile, median_gen())
+        median_unique.write_streaming_values(self.test_outfile, median_gen())
 
         # Expect equality between produced str and OUTPUTSTR
         with open(self.test_outfile, 'r') as f:
