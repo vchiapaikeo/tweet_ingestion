@@ -3,7 +3,7 @@ Tweet Ingestion - Insights Coding Challenge Submitted by Victor Chiapaikeo
 
 ## Overview
 
-Tweet Ingestion application designed to efficiently ingest a high volume of tweets and perform processing which includes:
+Tweet Ingestion application designed to efficiently ingest a high volume of tweets and perform processing which includes the following:
 
 - Produce a file that groups words from tweets and counts their frequency. Example output is as follows:
 ```
@@ -24,9 +24,7 @@ Tweet Ingestion application designed to efficiently ingest a high volume of twee
 
 Scripts were written using Python 2.7 and have not been tested for portability to Python 3.X.
 
-You are encouraged to use a python virtual environment using virtualenv and pip.
-
-NOTE (2015-07-18): As of now, the requirements file is empty because no modules outside the default build are used.
+You are encouraged to use a python virtual environment using virtualenv and pip. NOTE (2015-07-18): As of now, the requirements file is empty because no modules outside the default build are used.
 
 ```sh
 $ virtualenv venv
@@ -45,7 +43,7 @@ $ pip install -r requirements
 
 Applications can be run separately or together from a shell script.
 
-**To run separately**
+**To run separately:**
 
 Both words_tweeted.py and median_unique.py accepts the same two parameters:
 
@@ -59,7 +57,7 @@ $ python words_tweeted.py tweet_input/tweets.txt tweet_output/ft1.txt
 $ python median_unique.py tweet_input/tweets.txt tweet_output/ft1.txt
 ```
 
-**To run from shell script**
+**To run from shell script:**
 
 This scenario is simpler and will execute both scripts back to back.
 ```sh
