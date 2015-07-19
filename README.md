@@ -69,7 +69,7 @@ Unit tests have been created to test functions within the app. A test should be 
 
 ```sh
 $ cd tweet_ingestion
-$ python -m src.tests.unit_words_tweeeted
+$ python -m src.tests.unit_words_tweeted
 ```
 
 ```sh
