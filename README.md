@@ -89,5 +89,5 @@ OK
 ## Next Steps (how you can help!)
 It goes without saying that this script is a work in progress. A number of items could still be added to increase functionality, performance, and robustness of this script. A few of my favorite wish-list items are listed.
 
-1. Reduce memory footprint in src/median_unique.py script - the current implementation (submitted 2015-07-19) retains lists of streaming unique word counts in a line in memory...
+1. Reduce memory footprint in src/median_unique.py - the current implementation (submitted 2015-07-19) retains lists of streaming unique word counts per line in memory...
 2. Add more tests!
