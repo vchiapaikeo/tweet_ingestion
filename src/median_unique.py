@@ -115,6 +115,7 @@ if __name__ == "__main__":
         FILE_OUTPUT = os.path.join('..', 'tweet_output', 'ft2.txt')
 
     print('Appending calculated median from "{0}" to "{1}"'.format(FILE_INPUT, FILE_OUTPUT))
-    write_streaming_values(FILE_OUTPUT, get_streaming_median(FILE_INPUT))
+    median_gen = get_streaming_median(FILE_INPUT)
+    write_streaming_values(FILE_OUTPUT, median_gen)
 
     print('Script complete. File output to {0}\n'.format(FILE_OUTPUT))
