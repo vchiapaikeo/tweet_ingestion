@@ -15,7 +15,6 @@ two elements surrounding the 50th percentile is the effective median.
 See heapq documentation for more details
 https://docs.python.org/2/library/heapq.html
 
-
 """
 import os
 import sys
