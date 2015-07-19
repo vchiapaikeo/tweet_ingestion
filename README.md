@@ -22,7 +22,7 @@ Tweet Ingestion application designed to efficiently ingest a high volume of twee
 
 ## Setup
 
-Scripts were written using Python 2.7 and have not been tested for portability to Python 3.X.
+This code is intended to be run on Linux distributions, Mac OS's, and Windows. Scripts were written using Python 2.7 and have not been tested for portability to Python 3.X.
 
 You are encouraged to use a python virtual environment using virtualenv and pip. NOTE (2015-07-18): As of now, the requirements file is empty because no modules outside the default build are used.
 
