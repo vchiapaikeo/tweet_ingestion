@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 Test core functions in words_tweeted module
 
@@ -24,6 +26,7 @@ tarts                       3
 vitamins                    2
 
 """
+
 import os
 import unittest
 from .. import words_tweeted

@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 Test core functions in median_unique module
 
@@ -14,6 +16,7 @@ Given a generator with these values: [4.0, 3.5, 3.0]
 write_streaming_median will write to file this string: '4.0\n3.5\n3.0\n'
 
 """
+
 import os
 import unittest
 from .. import median_unique

@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """Module defines functions used to efficiently calculate a streaming median 
 from lines of tweets
 
@@ -21,6 +23,7 @@ See heapq documentation for more details:
 https://docs.python.org/2/library/heapq.html
 
 """
+
 import os
 import sys
 import heapq

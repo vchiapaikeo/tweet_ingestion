@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """Module defines functions used to create a word frequency map from lines of 
 tweets
 
@@ -7,6 +9,7 @@ and then upon completion sorting the dictionary and outputting it to a file in
 the form 'key\tvalue'
 
 """
+
 import os
 import sys
 
