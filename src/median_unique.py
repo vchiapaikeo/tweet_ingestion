@@ -1,4 +1,5 @@
-"""Module defines functions used to efficiently calculate a streaming median
+"""Module defines functions used to efficiently calculate a streaming median 
+from lines of tweets
 
 The streaming median is calculated by keeping two priority queues (using Python's
 heapq module) and leveraging a property associated with heaps where the root is
@@ -12,7 +13,11 @@ In the case of an odd number of elements, the element at the 50th percentile is
 the median whereas in the case of an even number of elements, the average of the 
 two elements surrounding the 50th percentile is the effective median.
 
-See heapq documentation for more details
+A shortfall of the current implementation is that the entire array of numbers
+are stored in memory. The next iteration should be focused on understanding
+how to store only those elements crucial to derive the median calculation and no more.
+
+See heapq documentation for more details:
 https://docs.python.org/2/library/heapq.html
 
 """

@@ -1,4 +1,11 @@
-"""Module defines functions used to create a word frequency map
+"""Module defines functions used to create a word frequency map from lines of 
+tweets
+
+The word freqeuncy map is created by reading words in a file (or lines in a file 
+and words in a line), attempting to add that word to a general dictionary, 
+and then upon completion sorting the dictionary and outputting it to a file in 
+the form 'key\tvalue'
+
 """
 import os
 import sys
