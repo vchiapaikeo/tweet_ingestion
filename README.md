@@ -22,7 +22,7 @@ Tweet Ingestion application designed to efficiently ingest a high volume of twee
 
 ## Setup
 
-This code is intended to be run on Linux distributions, Mac OS's, and Windows. Scripts were written using Python 2.7 and have not been tested for portability to Python 3.X.
+This code is portable across the following OS's: Linux distributions, Mac and Windows OS's. Scripts were written using Python 2.7 and have not been tested for portability to Python 3.X.
 
 You are encouraged to use a python virtual environment using virtualenv and pip. NOTE (2015-07-18): As of now, the requirements file is empty because no modules outside the default build are used.
 
@@ -53,8 +53,8 @@ Both words_tweeted.py and median_unique.py accepts the same two parameters:
 ```sh
 $ git clone https://github.com/vchiapaikeo/tweet_ingestion.git
 $ cd tweet_ingestion
-$ python words_tweeted.py tweet_input/tweets.txt tweet_output/ft1.txt
-$ python median_unique.py tweet_input/tweets.txt tweet_output/ft1.txt
+$ python src/words_tweeted.py tweet_input/tweets.txt tweet_output/ft1.txt
+$ python src/median_unique.py tweet_input/tweets.txt tweet_output/ft1.txt
 ```
 
 **To run from shell script:**
