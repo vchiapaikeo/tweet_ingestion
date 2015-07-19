@@ -1,3 +1,5 @@
+"""Module defines functions used to create a word frequency map
+"""
 import os
 import sys
 
