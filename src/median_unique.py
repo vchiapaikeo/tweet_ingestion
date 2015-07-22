@@ -108,7 +108,7 @@ def write_streaming_values(fileout, gen):
             append_handle.write("{0}\n".format(val))
 
 
-if __name__ == "__main__":
+def main():
     if len(sys.argv) == 3:
         print('Accepting parameters from command line')
         script, FILE_INPUT, FILE_OUTPUT = sys.argv
@@ -122,3 +122,7 @@ if __name__ == "__main__":
     write_streaming_values(FILE_OUTPUT, median_gen)
 
     print('Script complete. File output to {0}\n'.format(FILE_OUTPUT))
+
+
+if __name__ == "__main__":
+    main()

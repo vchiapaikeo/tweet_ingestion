@@ -66,7 +66,7 @@ def sort_and_write_dict(dct, fileout, tab_space=28):
             f.write("{k}{v}\n".format(k=key.ljust(tab_space), v=dct[key]))
 
 
-if __name__ == "__main__":
+def main():
     if len(sys.argv) == 3:
         print('Accepting parameters from command line')
         script, FILE_INPUT, FILE_OUTPUT = sys.argv
@@ -82,3 +82,7 @@ if __name__ == "__main__":
     sort_and_write_dict(d, FILE_OUTPUT)
 
     print('Script complete. File output to "{0}"\n'.format(FILE_OUTPUT))
+
+
+if __name__ == "__main__":
+    main()
